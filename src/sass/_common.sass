@@ -554,7 +554,6 @@ body
 				color: $orange
 				transition: all 0.2s
 		&__img
-			overflow: hidden
 			img
 				width: 100%
 				height: auto
@@ -592,8 +591,6 @@ body
 			&:hover
 				color: $orange
 				transition: all 0.2s
-		&__img
-			overflow: hidden
 			img
 				width: 100%
 				height: auto
@@ -632,8 +629,6 @@ body
 		padding-right: 20px
 	.column-1
 		width: 280px
-		.el
-			&__img
 	.column-2
 		width: 500px
 		font-size: 20px
@@ -807,15 +802,10 @@ body
 /*----------- Tablet Landscape Main Page ----------*/
 /*-------------------------------------------------*/
 .mobile.landscape
-	.content
-		width: 1024px
 	.wrapper
 		margin-left: auto
 		margin-right: auto
 		overflow: hidden
-		min-width: 1024px
-	.footer
-		min-width: 1024px
 	#menu_toggle
 		display: block
 		float: left
@@ -859,48 +849,10 @@ body
 			border-bottom: 1px solid #DAE9E9
 			+ li
 				margin-left: 0
-	.grid
-		&__list
-			&-el
-				width: 25%
-				&:nth-child(12) ~ li
-					display: none
-	.hot-now
-		margin-left: 20px
-		margin-right: 20px
-		.row
-			margin-left: -32px
-			margin-right: -32px
-		.el
-			padding-left: 10px
-			padding-right: 10px
-			&__img
-				height: 123px
-	.top-trend
-		.row
-			margin-left: -10px
-			margin-right: -10px
-		.el
-			padding-left: 10px
-			padding-right: 10px
-			&__img
-				height: 258px
-			&.el--small
-				.el
-					&__img
-						height: 124px
-	.subscribe
-		width: 603px
 /*------------------------------------------------*/
 /*----------- Tablet Portrait Main Page ----------*/
 /*------------------------------------------------*/
 .mobile.portrait
-	.wrapper
-		min-width: 768px
-	.footer
-		min-width: 768px
-	.content
-		width: 768px
 	#menu_toggle
 		display: block
 		float: left
@@ -944,11 +896,6 @@ body
 			+ li
 				margin-left: 0
 	.grid
-		&__list
-			&-el
-				width: 33.3%
-				&:nth-child(9) ~ li
-					display: none
 		&__title
 			&-text
 				width: 100%
@@ -956,43 +903,24 @@ body
 				font-size: 38px
 				line-height: 50px
 	.hot-now
-		margin-left: 20px
-		margin-right: 20px
 		padding-bottom: 12px
-		.row
-			margin-left: -32px
-			margin-right: -32px
 		.el
 			margin-bottom: 20px
 			padding-left: 10px
 			padding-right: 10px
 			width: 50%
-			&__img
-				height: 185px
 	.top-trend
 		.row
 			margin-left: -10px
 			margin-right: -10px
 		.el
-			padding-left: 10px
-			padding-right: 10px
 			margin-bottom: 80px
 			width: 100%
-			&__img
-				height: 385px
 			&.el--small
 				margin-bottom: 0
 				.el
 					margin-bottom: 40px
 					width: 50%
-					&__img
-						height: 187px
-	.pagination
-		margin-top: -40px
-	.subscribe
-		width: 688px
-	.mgidiply-soc
-		display: none
 /*------------------------------------------------*/
 /*----------------- Mobile Main Page -------------*/
 /*------------------------------------------------*/
@@ -1001,7 +929,7 @@ body
 		&__list
 			&-el
 				height: auto
-				&:nth-child(9)
+				&:nth-child(1)
 					~ li
 						display: block
 		&__img
@@ -1065,15 +993,11 @@ body
 					display: none
 			.el
 				width: 100%
-				&__img
-					height: 410px
 				&.el--small
 					.el
 						width: 50%
 						font-size: 20px
 						line-height: 30px
-						&__img
-							height: 193px
 	/* right aside */
 	.content__right
 		float: right
@@ -1131,8 +1055,6 @@ body
 		float: left
 		margin-right: 10px
 		width: 100px
-		height: 56px
-		overflow: hidden
 		img
 			width: 100%
 			height: auto
@@ -1295,10 +1217,9 @@ body
 				line-height: 25px
 		a
 			display: block
-		+r(767)
+		+r(768)
 			width: 100%
 	&__img
-		overflow: hidden
 		img
 			width: 100%
 			height: auto
@@ -1311,101 +1232,93 @@ body
 /*-------------------------------------------------*/
 /*-------------------- QHD Display ----------------*/
 /*-------------------------------------------------*/
-.no-mobile
-	@media only screen and (min-width: 1600px)
-	.content
-		max-width: 1460px
-		&-right
-			display: block
-		&-left
-			float: left
-	.top-trend
-		.section__title
-			position: relative
-			padding-bottom: 10px
-			&:after
-				position: absolute
-				content: ''
-				bottom: 0
-				left: 0
-				right: 0
-				background-color: #DAE9E9
-	@media only screen and (max-width: 1023px)
-		.hot-now
-			> .row
-				margin-left: -10px
-				margin-right: -10px
-			.el
-				padding-left: 10px
-				padding-right: 10px
-				+r(767)
-					width: 50%
-				+r(479)
-					width: 100%
-	@media only screen and (max-width: 1337px)
-		.column-2, .column-3
+.hot-now
+	> .row
+		+r(1023)
+			margin-left: -10px
+			margin-right: -10px
+	.el
+		+r(1023)
+			padding-left: 10px
+			padding-right: 10px
+		+r(768)
+			width: 50%
+		+r(480)
+			width: 100%
+.column-section > .row
+	+r(1023)
+		width: calc(100% + 20px)
+		margin-left: -10px
+		margin-right: -10px
+.column-section
+	.column
+		+r(1023)
+			padding-left: 10px
+			padding-right: 10px
+	.column-1
+		+r(1023)
+			width: 260px
+		+r(820)
+			width: 50%
+	.column-2, .column-3
+		+r(1337)
 			width: 50%
 			font-size: 20px
 			line-height: 25px
 			font-weight: normal
-	@media only screen and (max-width: 1023px)
-		.column-section > .row
-			width: calc(100% + 20px)
-			margin-left: -10px
-			margin-right: -10px
-		.column
-			padding-left: 10px
-			padding-right: 10px
-		.column-1
-			width: 260px
-		.column-2, .column-3
+		+r(1023)
 			font-size: 18px
 			line-height: 22px
-	@media only screen and (max-width: 820px)
-		.column-1
-			width: 50%
-		.column-2
+	.column-2
+		+r(820)
 			font-size: 16px
 			line-height: 20px
-		.column-3
+	.column-3
+		+r(820)
 			display: none
-	@media only screen and (max-width: 479px)
-		.column-1, .column-2
+	.column-1, .column-2
+		+r(480)
 			display: block
 			width: 100%
-	@media only screen and (max-width: 1280px)
-		.grid__list-el
-			width: 25%
-			&:nth-child(12)
-				~ .grid__list-el
-					display: none
-	@media only screen and (max-width: 1024px)
-		.header
-			display: none
-		.grid__list-el
-			width: 33.3%
-			&:nth-child(9)
-				~ .grid__list-el
-					display: none
-	@media only screen and (max-width: 720px)
-		.grid__title-text
-			margin-top: -100px
-			width: 90%
-			font-size: 40px
-		.grid__list-el
-			width: 50%
-			&:nth-child(4)
-				~ .grid__list-el
-					display: none
-	@media only screen and (max-width: 479px)
-		.grid__title-text
-			margin-top: -30px
-			font-size: 20px
-		.grid__list-el
-			width: 100%
-			&:nth-child(1)
-				~ .grid__list-el
-					display: none
+.grid__list-el
+	+r(1280)
+		width: 25%
+		&:nth-child(12)
+			~ .grid__list-el
+				display: none
+.header
+	+r(720)
+		display: none
+.grid__list-el
+	+r(1023)
+		width: 25%
+.grid__title-text
+	+r(720)
+		margin-top: -100px
+		width: 90%
+		font-size: 40px
+.grid__list-el
+	+r(768)
+		width: 33.33%
+		&:nth-child(9)
+			~ .grid__list-el
+				display: none
+.grid__list-el
+	+r(640)
+		width: 50%
+		&:nth-child(4)
+			~ .grid__list-el
+				display: none
+.grid__title-text
+	+r(480)
+		margin-top: -30px
+		font-size: 20px
+.grid__list-el
+	+r(480)
+		width: 100%
+		&:nth-child(1)
+			~ .grid__list-el
+				display: none
 /*-------------------------------------------------*/
 /*----------------- Other styles ------------------*/
 /*-------------------------------------------------*/

@@ -70,7 +70,7 @@ head.ready(function(){
 				slidesToScroll: 1,
 				autoplay: true,
 				autoplaySpeed: 10000,
-				speed: 1500
+				speed: 300
 			});
 		}
 	}
