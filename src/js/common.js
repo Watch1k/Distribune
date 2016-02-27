@@ -58,22 +58,22 @@ head.ready(function(){
 		$('.popup-sign').addClass('is-active').fadeIn(300);
 	});
 
-	// mobile slider
-	if (phoneInd) {
-		if ($('.grid__list').length) {
-			$('.grid__list').slick({
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				dots: true,
-				arrows: false,
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				autoplay: true,
-				autoplaySpeed: 10000,
-				speed: 300
-			});
-		}
-	}
+	// // mobile slider
+	// if (phoneInd) {
+	// 	if ($('.grid__list').length) {
+	// 		$('.grid__list').slick({
+	// 			slidesToShow: 1,
+	// 			slidesToScroll: 1,
+	// 			dots: true,
+	// 			arrows: false,
+	// 			slidesToShow: 1,
+	// 			slidesToScroll: 1,
+	// 			autoplay: true,
+	// 			autoplaySpeed: 10000,
+	// 			speed: 300
+	// 		});
+	// 	}
+	// }
 
 	// mobile nav
 	$('#menu_toggle').on('click', function(){
