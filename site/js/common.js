@@ -65,7 +65,7 @@ head.ready(function(){
 	$('.popup__close-btn').on('click', function(){
 		$(this).parent().parent().fadeOut(200).removeClass('is-active');
 	});
-	$(document).click(function(e) {
+	$(document).on('click touchstart', function(e) {
 	    if ( ($(e.target).closest('.popup__in').length === 0) && ($(e.target).closest('.popup-toggle').length === 0) ) {
 	        $('.popup').fadeOut(200);
 	        $('.popup').removeClass('is-active');
