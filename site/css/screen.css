@@ -1531,7 +1531,7 @@ body {
     line-height: 28px; } }
 .subscribe__title span {
   color: #FE5F00; }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .subscribe {
     width: 100%;
     padding: 20px; } }
@@ -1596,7 +1596,7 @@ body {
   width: 300px;
   height: 214px;
   background-color: #F5F5F5; }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .mgidiply-soc {
     display: none; } }
 
