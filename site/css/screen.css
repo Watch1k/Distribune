@@ -355,7 +355,6 @@ body { min-width: 320px; font-family: "Montserrat", Arial, sans-serif; font-size
 
 /* Subscribe */
 .subscribe-wrap { margin-top: 40px; margin-bottom: 40px; }
-.subscribe-wrap > .row { padding-top: 40px; border-top: 1px solid #DAE9E9; }
 
 .subscribe { float: left; padding: 20px 38px 40px; width: -webkit-calc(100% - 320px); width: -moz-calc(100% - 320px); width: calc(100% - 320px); background-color: rgba(254, 95, 0, 0.08); -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }
 .subscribe__title { font-weight: 700; font-size: 40px; line-height: 50px; }
