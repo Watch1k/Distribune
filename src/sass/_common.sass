@@ -77,16 +77,90 @@ body
 /* logo */
 .logo
 	float: left
-	margin-left: 40px
 	margin-right: 40px
+	+r(640)
+		margin-right: 0
 	a
 		display: block
 		padding: 7px 0
+		+r(480)
+			padding-top: 13px
+			padding-bottom: 13px
+		+r(400)
+			padding-top: 16px
+			padding-bottom: 16px
 	img
 		width: 270px
 		height: 36px
 		vertical-align: middle
+		+r(480)
+			width: 180px
+			height: 24px
+		+r(400)
+			width: 135px
+			height: 18px
 /* navigation */
+#menu_toggle
+	display: none
+	position: relative
+	float: left
+	margin-left: -20px
+	margin-right: 20px
+	width: 60px
+	height: 50px
+	background-color: $orange
+	cursor: pointer
+	+r(720)
+		display: block
+	button
+		+vcenter
+		overflow: hidden
+		width: 30px
+		height: 30px
+		font-size: 0
+		text-indent: -9999px
+		appearance: none
+		background-color: transparent
+		transition: background 0.3s
+		transition: margin 0.2s
+		span
+			display: block
+			position: absolute
+			top: 50%
+			left: 0
+			right: 0
+			height: 3px
+			background: white
+			transition: background 0s 0.3s
+			&:before, &:after
+				position: absolute
+				display: block
+				left: 0
+				width: 100%
+				height: 3px
+				background-color: #fff
+				content: ""
+				transition-duration: 0.3s, 0.3s
+				transition-delay: 0.3s, 0s
+			&:before
+				top: -9px
+				transition-property: top, transform
+			&:after
+				bottom: -9px
+				transition-property: bottom, transform
+	&.is-active
+		button
+			background-color: transparent
+			span
+				background: none
+				&:before
+					top: 0
+					transform: rotate(45deg)
+				&:after
+					bottom: 0
+					transform: rotate(-45deg)
+				&:before, &:after
+					transition-delay: 0s, 0.3s
 .navigation
 	overflow: hidden
 	float: left
@@ -95,6 +169,12 @@ body
 	font-weight: 700
 	font-size: 14px
 	line-height: 18px
+	+r(960)
+		max-width: calc(100% - 500px)
+	+r(720)
+		width: 0
+		height: 0
+		// visibility: hidden
 	> ul
 		+pie-clearfix
 		> li
@@ -128,6 +208,8 @@ body
 	padding-bottom: 15px
 	background-color: #DAE9E9
 	text-align: center
+	+r(720)
+		background-color: #fff
 	&-btn
 		display: inline-block
 		padding: 5px 20px
@@ -143,6 +225,16 @@ body
 		&:hover
 			background-color: $orange
 			transition: all 0.2s
+		+r(720)
+			padding-top: 2px
+			padding-bottom: 2px
+			font-size: 16px
+			color: #6E7E85
+			line-height: 20px
+			background-color: transparent
+			&:hover
+				color: $orange
+				background-color: transparent
 .flexMenu-popup
 	position: absolute
 	top: 100%
@@ -154,6 +246,9 @@ body
 	border-bottom: 1px solid #DAE9E9
 	background-color: #fff
 	+pie-clearfix
+	+r(720)
+		padding-top: 5px
+		background-color: #f5f5f5
 	.flexMenu-title
 		float: left
 		padding-left: 40px
@@ -163,9 +258,28 @@ body
 		line-height: 29px
 		text-transform: uppercase
 		letter-spacing: 0.5em
+		+r(1024)
+			margin-right: 20px
+			padding-left: 20px
+			width: 200px
+		+r(720)
+			display: none
 	ul
 		overflow: hidden
-		margin-left: 310px
+		position: relative
+		margin-left: 350px
+		+r(1024)
+			margin-left: 200px
+		+r(720)
+			margin-left: 0
+			&:before
+				content: ''
+				position: absolute
+				left: 50%
+				top: 0
+				bottom: 15px
+				width: 1px
+				background-color: #dae9e9
 	li
 		overflow: hidden
 		float: left
@@ -174,6 +288,16 @@ body
 		margin-bottom: 15px
 		white-space: nowrap
 		text-overflow: ellipsis
+		+r(1280)
+			width: 25%
+		+r(1024)
+			width: 33.3%
+		+r(720)
+			width: 50%
+			padding-left: 20px
+			&:nth-child(10)
+				~ li
+					display: none
 		a
 			color: #6E7E85
 			transition: all 0.2s
@@ -185,6 +309,8 @@ body
 				transition: all 0.2s
 .search-toggle
 	float: left
+	+r(720)
+		display: none
 	a
 		display: block
 		padding-left: 10px
@@ -208,22 +334,33 @@ body
 	padding-top: 15px
 	padding-bottom: 15px
 	background-color: #DAE9E9
+	+r(720)
+		background-color: #f5f5f5
 	&__title
 		float: left
 		padding-left: 40px
 		margin-right: 40px
 		width: 310px
 		font-size: 24px
-		line-height: 29px
+		line-height: 40px
 		font-weight: 700
 		text-transform: uppercase
 		letter-spacing: 0.5em
+		+r(1024)
+			margin-right: 20px
+		+r(720)
+			display: none
 	&__in
 		overflow: hidden
 		margin-left: 310px
+		+r(720)
+			margin-left: 20px
+			margin-right: 20px
 	.field
 		float: left
 		width: 65%
+		+r(720)
+			width: 100%
 		input
 			padding-left: 15px
 			padding-right: 15px
@@ -249,6 +386,8 @@ body
 				background-color: $grey-dark
 				border-radius: 5px
 				transition: all 0.2s
+				+r(720)
+					display: none
 				&:hover
 					background-color: $orange
 					transition: all 0.2s
@@ -258,7 +397,8 @@ body
 		float: right
 		margin-top: 10px
 		margin-left: 20px
-		margin-right: 40px
+		+r(640)
+			margin-left: 0
 .login-btn
 	display: inline-block
 	padding-left: 15px
@@ -289,6 +429,8 @@ body
 			display: block
 .header
 	.socials
+		+r(960)
+			display: none
 		li
 			transition: all 0.3s
 			&:hover
@@ -314,6 +456,8 @@ body
 		padding: 30px 85px 60px
 		background-color: #fff
 		border-radius: 5px
+		+r(639)
+			padding: 20px
 	&__close-btn
 		position: absolute
 		top: 10px
@@ -337,10 +481,13 @@ body
 		text-decoration: none
 .popup-login
 	&__list
+		width: 290px
 		font-size: 15px
 		color: #fff
 		line-height: 19px
 		+pie-clearfix
+		+r(480)
+			width: 260px
 		li
 			background-color: #49659F
 			border-radius: 5px
@@ -353,8 +500,10 @@ body
 				display: block
 				padding-top: 14px
 				padding-bottom: 15px
-				width: 290px
 				padding-left: 75px
+				+r(480)
+					padding-left: 60px
+					font-size: 13px
 				i
 					position: absolute
 					left: 0
@@ -371,6 +520,8 @@ body
 						top: 50%
 						transform: translate(-50%,-50%)
 						margin-left: 0
+					+r(480)
+						width: 45px
 			+ li
 				margin-top: 10px
 				background-color: #55ACEE
@@ -393,6 +544,8 @@ body
 		margin: 0 auto
 		width: 290px
 		+pie-clearfix
+		+r(480)
+			width: 260px
 		.field
 			input
 				width: 100%
@@ -444,6 +597,26 @@ body
 			width: 20%
 			height: 180px
 			cursor: pointer
+			+r(1024)
+				width: 25%
+				&:nth-child(12)
+					~ .grid__list-el
+						display: none
+			+r(768)
+				width: 33.33%
+				&:nth-child(9)
+					~ .grid__list-el
+						display: none
+			+r(640)
+				width: 50%
+				&:nth-child(4)
+					~ .grid__list-el
+						display: none
+			+r(480)
+				width: 100%
+				&:nth-child(1)
+					~ .grid__list-el
+						display: none
 	&__img
 		height: 100%
 		img
@@ -488,6 +661,13 @@ body
 			font-size: 50px
 			line-height: 1.3
 			color: #fff
+			+r(720)
+				margin-top: -100px
+				width: 90%
+				font-size: 40px
+			+r(480)
+				margin-top: -30px
+				font-size: 20px
 			span
 				display: block
 	&__btn-more
@@ -528,9 +708,12 @@ body
 	font-size: 16px
 	line-height: 20px
 	border-radius: 5px
-	.row
+	> .row
 		margin-left: -20px
 		margin-right: -20px
+		+r(1024)
+			margin-left: -10px
+			margin-right: -10px
 	a
 		text-decoration: none
 	.section__title
@@ -547,6 +730,13 @@ body
 		margin-right: -4px
 		width: 25%
 		vertical-align: top
+		+r(1024)
+			padding-left: 10px
+			padding-right: 10px
+		+r(768)
+			width: 50%
+		+r(480)
+			width: 100%
 		> a
 			display: block
 			transition: all 0.2s
@@ -623,21 +813,59 @@ body
 		width: calc(100% + 40px)
 		display: table
 		table-layout: fixed
+		+r(1024)
+			width: calc(100% + 20px)
+			margin-left: -10px
+			margin-right: -10px
 	.column
 		display: table-cell
 		padding-left: 20px
 		padding-right: 20px
+		+r(1024)
+			padding-left: 10px
+			padding-right: 10px
 	.column-1
 		width: 280px
+		+r(1024)
+			width: 260px
+		+r(820)
+			width: 50%
+		+r(480)
+			display: block
+			width: 100%
 	.column-2
 		width: 500px
 		font-size: 20px
 		line-height: 25px
+		+r(1337)
+			width: 50%
+			font-size: 20px
+			line-height: 25px
+			font-weight: normal
+		+r(1024)
+			font-size: 18px
+			line-height: 22px
+		+r(820)
+			font-size: 16px
+			line-height: 20px
+		+r(480)
+			display: block
+			width: 100%
 	.column-3
 		width: 100%
 		font-size: 25px
 		line-height: 30px
 		font-weight: 700
+		+r(1337)
+			width: 50%
+			font-size: 20px
+			line-height: 25px
+			font-weight: normal
+		+r(1024)
+			font-size: 18px
+			line-height: 22px
+		+r(820)
+			display: none
 /* banner 100%x90px */
 .mgid-hr
 	margin-bottom: 40px
@@ -716,10 +944,23 @@ body
 		font-weight: 700
 		font-size: 40px
 		line-height: 50px
+		+r(768)
+			font-size: 30px
+			line-height: 36px
+		+r(480)
+			font-size: 24px
+			line-height: 28px
 		span
 			color: $orange
 	+r(1024)
 		width: 100%
+		padding: 20px
+	+r(767)
+		color: #fff
+		text-align: center
+		background-color: $grey-dark
+		.socials
+			display: inline-block
 .subscribe, .post
 	.socials
 		float: none
@@ -732,11 +973,15 @@ body
 			background-color: #49659F
 			border-radius: 5px
 			transition: all 0.3s
+			+r(480)
+				margin-right: 5px
 			&:hover
 				background-color: darken(#49659F,20)
 				transition: all 0.3s
 			a
 				padding: 18px 17px 18px 15px
+				+r(480)
+					padding: 10px 9px 10px 7px
 			+ li
 				background-color: #55ACEE
 				&:hover
@@ -795,106 +1040,10 @@ body
 				a
 					color: $orange
 					transition: all 0.2s
-#menu_toggle
-	position: relative
-	display: none
-/*-------------------------------------------------*/
-/*----------- Tablet Landscape Main Page ----------*/
-/*-------------------------------------------------*/
-.mobile.landscape
-	.wrapper
-		margin-left: auto
-		margin-right: auto
-		overflow: hidden
-	#menu_toggle
-		display: block
-		float: left
-		margin-top: 10px
-		margin-left: 40px
-		width: 60px
-		height: 60px
-		text-align: center
-		background-color: $orange
-		border-radius: 5px
-		vertical-align: middle
-		i
-			margin-right: 5px
-			display: inline-block
-			color: #fff
-			font-size: 38px
-			line-height: 38px
-		&.is-active
-			i:before
-				content: unquote("\"\\#{e807}\"")
-	.navigation
-		display: none
-		position: absolute
-		top: 100%
-		left: 0
-		right: 0
-		margin: 0
-		z-index: 1000
-		font-weight: 700
-		font-size: 42px
-		line-height: 52px
-		text-align: center
-		background-color: #F5F5F5
-		box-shadow: 0 10px 20px #000
-		li
-			display: block
-			float: none
-			padding-left: 25px
-			padding-top: 13px
-			padding-bottom: 14px
-			border-bottom: 1px solid #DAE9E9
-			+ li
-				margin-left: 0
 /*------------------------------------------------*/
 /*----------- Tablet Portrait Main Page ----------*/
 /*------------------------------------------------*/
 .mobile.portrait
-	#menu_toggle
-		display: block
-		float: left
-		margin-top: 10px
-		margin-left: 40px
-		width: 60px
-		height: 60px
-		text-align: center
-		background-color: $orange
-		border-radius: 5px
-		vertical-align: middle
-		i
-			margin-right: 5px
-			display: inline-block
-			color: #fff
-			font-size: 38px
-			line-height: 38px
-		&.is-active
-			i:before
-				content: unquote("\"\\#{e807}\"")
-	.navigation
-		display: none
-		position: absolute
-		top: 100%
-		left: 0
-		right: 0
-		margin: 0
-		z-index: 1000
-		background-color: #F5F5F5
-		font-weight: 700
-		font-size: 42px
-		line-height: 52px
-		text-align: center
-		box-shadow: 0 10px 20px #000
-		li
-			display: block
-			float: none
-			padding-top: 13px
-			padding-bottom: 14px
-			border-bottom: 1px solid #DAE9E9
-			+ li
-				margin-left: 0
 	.grid
 		&__title
 			&-text
@@ -902,25 +1051,6 @@ body
 				margin-top: -80px
 				font-size: 38px
 				line-height: 50px
-	.hot-now
-		padding-bottom: 12px
-		.el
-			margin-bottom: 20px
-			padding-left: 10px
-			padding-right: 10px
-			width: 50%
-	.top-trend
-		.row
-			margin-left: -10px
-			margin-right: -10px
-		.el
-			margin-bottom: 80px
-			width: 100%
-			&.el--small
-				margin-bottom: 0
-				.el
-					margin-bottom: 40px
-					width: 50%
 /*------------------------------------------------*/
 /*----------------- Mobile Main Page -------------*/
 /*------------------------------------------------*/
@@ -1229,96 +1359,6 @@ body
 		font-size: 35px
 		line-height: 45px
 		background-color: #DAE9E9
-/*-------------------------------------------------*/
-/*-------------------- QHD Display ----------------*/
-/*-------------------------------------------------*/
-.hot-now
-	> .row
-		+r(1024)
-			margin-left: -10px
-			margin-right: -10px
-	.el
-		+r(1024)
-			padding-left: 10px
-			padding-right: 10px
-		+r(768)
-			width: 50%
-		+r(480)
-			width: 100%
-.column-section > .row
-	+r(1024)
-		width: calc(100% + 20px)
-		margin-left: -10px
-		margin-right: -10px
-.column-section
-	.column
-		+r(1024)
-			padding-left: 10px
-			padding-right: 10px
-	.column-1
-		+r(1024)
-			width: 260px
-		+r(820)
-			width: 50%
-	.column-2, .column-3
-		+r(1337)
-			width: 50%
-			font-size: 20px
-			line-height: 25px
-			font-weight: normal
-		+r(1024)
-			font-size: 18px
-			line-height: 22px
-	.column-2
-		+r(820)
-			font-size: 16px
-			line-height: 20px
-	.column-3
-		+r(820)
-			display: none
-	.column-1, .column-2
-		+r(480)
-			display: block
-			width: 100%
-.grid__list-el
-	+r(1280)
-		width: 25%
-		&:nth-child(12)
-			~ .grid__list-el
-				display: none
-.header
-	+r(720)
-		display: none
-.grid__list-el
-	+r(1024)
-		width: 25%
-.grid__title-text
-	+r(720)
-		margin-top: -100px
-		width: 90%
-		font-size: 40px
-.grid__list-el
-	+r(768)
-		width: 33.33%
-		&:nth-child(9)
-			~ .grid__list-el
-				display: none
-.grid__list-el
-	+r(640)
-		width: 50%
-		&:nth-child(4)
-			~ .grid__list-el
-				display: none
-.grid__title-text
-	+r(480)
-		margin-top: -30px
-		font-size: 20px
-.grid__list-el
-	+r(480)
-		width: 100%
-		&:nth-child(1)
-			~ .grid__list-el
-				display: none
 /*-------------------------------------------------*/
 /*----------------- Other styles ------------------*/
 /*-------------------------------------------------*/
