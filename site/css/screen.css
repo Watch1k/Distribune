@@ -1690,7 +1690,7 @@ body {
   height: 10px;
   bottom: 45px; }
 .mobile.phone .grid__list .slick-dots li {
-  padding: 0 5px; }
+  margin: 0 3px; }
 .mobile.phone .grid__list .slick-dots li button {
   width: 10px;
   height: 10px;
@@ -2087,6 +2087,13 @@ body {
 @media only screen and (max-width: 480px) {
   .mgid-large__text {
     padding: 5px 5px 10px; } }
+
+/*------------------------------------------------- */
+/*-------------- Validation styles ---------------- */
+/*------------------------------------------------- */
+.help-block {
+  font-size: 12px;
+  font-weight: normal; }
 
 /*------------------------------------------------- */
 /*----------------- Other styles ------------------ */

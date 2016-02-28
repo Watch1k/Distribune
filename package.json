@@ -12,12 +12,14 @@
     "gulp-copy": "0.0.2",
     "gulp-htmlhint": "^0.3.0",
     "gulp-iconfont": "^5.0.0",
+    "gulp-jshint": "^2.0.0",
     "gulp-postcss": "~6.0.0",
     "gulp-rigger": "^0.5.8",
     "gulp-ruby-sass": "~2.0.3",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-zip": "^3.0.2",
     "gulp.spritesmith": "^6.0.1",
+    "jshint": "^2.9.1",
     "lodash": "^3.10.1",
     "rimraf": "^2.4.3"
   }

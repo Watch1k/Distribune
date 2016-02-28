@@ -14,6 +14,7 @@ var gulp = require('gulp'),
     htmlhint = require("gulp-htmlhint"),
     cmq = require('gulp-combine-mq'),
     zip = require('gulp-zip'),
+    jshint = require('gulp-jshint'),
     reload = browserSync.reload;
 
 // IE 8 opacity
@@ -100,6 +101,7 @@ gulp.task('html', function () {
 gulp.task('js', function () {
     gulp.src('src/js/**/*.js')
         .pipe(rigger())
+        .pipe(jshint())
         .pipe(gulp.dest('site/js/'))
         .pipe(reload({stream: true}));
 });

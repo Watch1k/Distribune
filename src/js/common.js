@@ -2,6 +2,11 @@ head.ready(function(){
 
 	$('#loader').fadeOut('fast');
 
+	// validation
+	$.validate({
+		scrollToTopOnError : false
+	});
+
 	// Clear placeholder
 	(function() {
 		$('input,textarea').focus(function(){
@@ -17,8 +22,8 @@ head.ready(function(){
 	$('.navigation ul').flexMenu({
 		'linkText': 'More <i class="icon-triangle"></i>'
 	});
-	$(document).on('click', '.flexMenu-viewMore', function(){
-		if ($(this).hasClass('is-active')) {
+	$(document).on('click', '.flexMenu-viewMore > a', function(){
+		if ($(this).parent().hasClass('is-active')) {
 			$('.header').animate({'margin-bottom': $('.flexMenu-popup').outerHeight() - 1 + 'px'},500).siblings().eq(0).slideToggle(500);
 		} else {
 			$('.header').animate({'margin-bottom': '0'},500).siblings().eq(0).slideToggle(500);
