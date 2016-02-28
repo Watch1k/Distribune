@@ -210,6 +210,7 @@ body { min-width: 320px; font-family: "Montserrat", Arial, sans-serif; font-size
 .popup__close-btn i { display: block; }
 .popup__close-btn:hover { color: #2D3047; -webkit-transition: all 0.2s; -moz-transition: all 0.2s; -o-transition: all 0.2s; transition: all 0.2s; }
 .popup__title { margin-bottom: 20px; font-size: 28px; color: #2D3047; line-height: 34px; text-align: center; }
+@media only screen and (max-width: 480px) { .popup__title { margin-bottom: 10px; font-size: 20px; line-height: 24px; } }
 .popup a { text-decoration: none; }
 
 .popup-login__list { width: 290px; font-size: 15px; color: #fff; line-height: 19px; }
@@ -218,10 +219,10 @@ body { min-width: 320px; font-family: "Montserrat", Arial, sans-serif; font-size
 .popup-login__list li { background-color: #49659F; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; -webkit-transition: all 0.2s; -moz-transition: all 0.2s; -o-transition: all 0.2s; transition: all 0.2s; }
 .popup-login__list li:hover { background-color: #293959; -webkit-transition: all 0.2s; -moz-transition: all 0.2s; -o-transition: all 0.2s; transition: all 0.2s; }
 .popup-login__list li a { position: relative; display: block; padding-top: 14px; padding-bottom: 15px; padding-left: 75px; }
-@media only screen and (max-width: 480px) { .popup-login__list li a { padding-left: 60px; font-size: 13px; } }
+@media only screen and (max-width: 480px) { .popup-login__list li a { padding-top: 7px; padding-bottom: 8px; padding-left: 60px; font-size: 13px; } }
 .popup-login__list li a i { position: absolute; left: 0; top: 0; height: 100%; width: 60px; font-size: 24px; line-height: 24px; text-align: center; border-right: 1px solid rgba(255, 255, 255, 0.3); }
 .popup-login__list li a i:before { position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%); margin-left: 0; }
-@media only screen and (max-width: 480px) { .popup-login__list li a i { width: 45px; } }
+@media only screen and (max-width: 480px) { .popup-login__list li a i { width: 45px; font-size: 16px; line-height: 16px; } }
 .popup-login__list li + li { margin-top: 10px; background-color: #55ACEE; }
 .popup-login__list li + li:hover { background-color: #147bc9; }
 .popup-login__list li + li + li { background-color: #FE2230; }
@@ -237,9 +238,11 @@ body { min-width: 320px; font-family: "Montserrat", Arial, sans-serif; font-size
 .popup-sign .form-sign .field input { width: 100%; padding-left: 10px; padding-right: 10px; padding-top: 11px; padding-bottom: 13px; font-family: "Montserrat", Arial, sans-serif; font-size: 17px; color: #2D3047; line-height: 20px; text-align: center; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; border: 2px solid #DAE9E9; }
 .popup-sign .form-sign .field input:-moz-placeholder, .popup-sign .form-sign .field input::-moz-placeholder { color: #6E7E85; opacity: 1; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; }
 .popup-sign .form-sign .field input::-webkit-input-placeholder { color: #6E7E85; }
+@media only screen and (max-width: 480px) { .popup-sign .form-sign .field input { padding-top: 7px; padding-bottom: 9px; } }
 .popup-sign .form-sign .field + .field { margin-top: 10px; }
 .popup-sign .form-sign .field .submit-btn { width: 100%; padding-top: 14px; padding-bottom: 15px; font-family: "Montserrat", Arial, sans-serif; font-size: 15px; color: #fff; line-height: 19px; text-transform: uppercase; text-align: center; background-color: #FE5F00; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; -webkit-transition: all 0.2s; -moz-transition: all 0.2s; -o-transition: all 0.2s; transition: all 0.2s; }
 .popup-sign .form-sign .field .submit-btn:hover { background-color: #2D3047; -webkit-transition: all 0.2s; -moz-transition: all 0.2s; -o-transition: all 0.2s; transition: all 0.2s; }
+@media only screen and (max-width: 480px) { .popup-sign .form-sign .field .submit-btn { padding-top: 10px; padding-bottom: 11px; } }
 
 /* grid section */
 .grid-wrap { position: relative; overflow: hidden; }
