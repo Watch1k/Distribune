@@ -1655,7 +1655,7 @@ body {
   line-height: 50px; }
 
 /*------------------------------------------------ */
-/*----------------- Mobile Main Page ------------- */
+/*-------------------- Phone ONLY ---------------- */
 /*------------------------------------------------ */
 .mobile.phone .grid__list-el {
   height: 100%; }
@@ -1680,6 +1680,14 @@ body {
   font-size: 22px;
   line-height: 32px;
   text-align: center; }
+@media only screen and (max-width: 375px) {
+  .mobile.phone .grid__tooltip p {
+    bottom: 80px;
+    line-height: 28px; } }
+@media only screen and (max-width: 320px) {
+  .mobile.phone .grid__tooltip p {
+    font-size: 18px;
+    line-height: 24px; } }
 .mobile.phone .grid__btn-more {
   position: absolute;
   bottom: 70px;
@@ -1690,7 +1698,7 @@ body {
   height: 10px;
   bottom: 45px; }
 .mobile.phone .grid__list .slick-dots li {
-  margin: 0 3px; }
+  margin: 0 2px; }
 .mobile.phone .grid__list .slick-dots li button {
   width: 10px;
   height: 10px;
@@ -1748,6 +1756,12 @@ body {
 .mobile.phone .column-cat .el__text {
   left: 10px;
   right: 10px; }
+
+.mobile.phone.landscape .grid__tooltip p {
+  bottom: auto;
+  top: 50px;
+  font-size: 24px;
+  line-height: 32px; }
 
 /*------------------------------------------------- */
 /*------------------ Category Page ---------------- */
