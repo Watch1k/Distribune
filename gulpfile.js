@@ -76,7 +76,7 @@ gulp.task('sprite', function() {
         cssName: '_sprite.sass',
         imgPath: '../img/icons.png',
         cssFormat: 'sass',
-        padding: 0,
+        padding: 4,
         // algorithm: 'top-down',
         cssTemplate: src.helpers + '/sprite.template.mustache'
     }));

@@ -95,7 +95,8 @@ head.ready(function(){
 				slidesToScroll: 1,
 				autoplay: true,
 				autoplaySpeed: 10000,
-				speed: 300
+				speed: 300,
+				adaptiveHeight: true
 			});
 		}
 	}

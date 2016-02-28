@@ -110,7 +110,7 @@ body
 	height: 50px
 	background-color: $orange
 	cursor: pointer
-	+r(720)
+	+r(728)
 		display: block
 	button
 		+vcenter
@@ -164,14 +164,14 @@ body
 .navigation
 	overflow: hidden
 	float: left
-	max-width: calc(100% - 700px)
+	max-width: calc(100% - 630px)
 	height: 50px
 	font-weight: 700
 	font-size: 14px
 	line-height: 18px
 	+r(960)
-		max-width: calc(100% - 500px)
-	+r(720)
+		max-width: calc(100% - 450px)
+	+r(728)
 		width: 0
 		height: 0
 		// visibility: hidden
@@ -207,8 +207,9 @@ body
 	padding-top: 15px
 	padding-bottom: 15px
 	background-color: #DAE9E9
+	border-bottom: 1px solid #f5f5f5
 	text-align: center
-	+r(720)
+	+r(728)
 		background-color: #fff
 	&-btn
 		display: inline-block
@@ -225,7 +226,7 @@ body
 		&:hover
 			background-color: $orange
 			transition: all 0.2s
-		+r(720)
+		+r(728)
 			padding-top: 2px
 			padding-bottom: 2px
 			font-size: 16px
@@ -246,7 +247,7 @@ body
 	border-bottom: 1px solid #DAE9E9
 	background-color: #fff
 	+pie-clearfix
-	+r(720)
+	+r(728)
 		padding-top: 5px
 		background-color: #f5f5f5
 	.flexMenu-title
@@ -262,7 +263,7 @@ body
 			margin-right: 20px
 			padding-left: 20px
 			width: 200px
-		+r(720)
+		+r(728)
 			display: none
 	ul
 		overflow: hidden
@@ -270,7 +271,7 @@ body
 		margin-left: 350px
 		+r(1024)
 			margin-left: 200px
-		+r(720)
+		+r(728)
 			margin-left: 0
 			&:before
 				content: ''
@@ -292,7 +293,7 @@ body
 			width: 25%
 		+r(1024)
 			width: 33.3%
-		+r(720)
+		+r(728)
 			width: 50%
 			padding-left: 20px
 			&:nth-child(10)
@@ -309,7 +310,7 @@ body
 				transition: all 0.2s
 .search-toggle
 	float: left
-	+r(720)
+	+r(728)
 		display: none
 	a
 		display: block
@@ -334,7 +335,7 @@ body
 	padding-top: 15px
 	padding-bottom: 15px
 	background-color: #DAE9E9
-	+r(720)
+	+r(728)
 		background-color: #f5f5f5
 	&__title
 		float: left
@@ -348,18 +349,18 @@ body
 		letter-spacing: 0.5em
 		+r(1024)
 			margin-right: 20px
-		+r(720)
+		+r(728)
 			display: none
 	&__in
 		overflow: hidden
 		margin-left: 310px
-		+r(720)
+		+r(728)
 			margin-left: 20px
 			margin-right: 20px
 	.field
 		float: left
 		width: 65%
-		+r(720)
+		+r(728)
 			width: 100%
 		input
 			padding-left: 15px
@@ -386,7 +387,7 @@ body
 				background-color: $grey-dark
 				border-radius: 5px
 				transition: all 0.2s
-				+r(720)
+				+r(728)
 					display: none
 				&:hover
 					background-color: $orange
@@ -597,6 +598,7 @@ body
 .grid-wrap
 	position: relative
 	overflow: hidden
+	background-color: #2d3047
 	a
 		text-decoration: none
 		display: block
@@ -675,7 +677,7 @@ body
 			font-size: 50px
 			line-height: 1.3
 			color: #fff
-			+r(720)
+			+r(728)
 				margin-top: -100px
 				width: 90%
 				font-size: 40px
@@ -764,6 +766,8 @@ body
 				vertical-align: bottom
 		&__text
 			padding: 10px 0 20px
+	+r(1460)
+		border-radius: 0
 /* column-section */
 .column-section
 	font-size: 16px
@@ -801,6 +805,8 @@ body
 				vertical-align: bottom
 		&__text
 			padding: 10px 15px 20px
+			+r(480)
+				padding: 5px 5px 10px
 		&.el--small
 			margin-bottom: 0
 			> .row
@@ -885,6 +891,8 @@ body
 	margin-bottom: 40px
 	height: 90px
 	background-color: #F5F5F5 // for example
+	+r(480)
+		margin-bottom: 20px
 /* pagination */
 .pagination
 	overflow: hidden
@@ -893,6 +901,7 @@ body
 	a
 		text-decoration: none
 	&__button
+		overflow: hidden
 		float: left
 		padding-top: 8px
 		padding-left: 21px
@@ -902,25 +911,36 @@ body
 		font-weight: 700
 		font-size: 32px
 		color: #fff
-		line-height: 39px
+		line-height: 44px
 		background-color: $grey-dark
 		border-radius: 5px
 		transition: all 0.2s
 		&:hover
 			background-color: $orange
 			transition: all 0.2s
+		+r(640)
+			padding-left: 10px
+			padding-right: 10px
+			width: 40px
+			font-size: 0
+			line-height: 0
+			text-indent: -9999px
 	&__prev
 		text-align: right
 	&__next
 		text-align: left
+		float: right
 	&__list
 		float: left
-		margin: 17px 30px 0
+		margin: 12px 30px 0
+		width: calc(100% - 380px)
 		font-weight: 700
 		font-size: 20px
 		line-height: 24px
+		text-align: center
 		li
-			float: left
+			display: inline-block
+			margin-right: -4px
 			&.is-active
 				color: #fff
 				border-radius: 5px
@@ -928,6 +948,23 @@ body
 			a
 				display: block
 				padding: 0 5px 2px
+		+r(640)
+			margin-left: 15px
+			margin-right: 15px
+			width: calc(100% - 110px)
+.pagination.pagination-sm
+	.pagination__button
+		background-color: $orange
+		&:hover
+			background-color: $grey-dark
+	.pagination__list
+		margin-top: 10px
+		margin-right: 0
+		font-size: 32px
+		line-height: 39px
+		li
+			+ li
+				margin-left: 10px
 .icon-arrow_left
 	float: left
 	margin-top: 9px
@@ -947,6 +984,9 @@ body
 .subscribe-wrap
 	margin-top: 40px
 	margin-bottom: 40px
+	+r(480)
+		margin-top: 20px
+		margin-bottom: 20px
 .subscribe
 	float: left
 	padding: 20px 38px 40px
@@ -1071,7 +1111,7 @@ body
 	.grid
 		&__list
 			&-el
-				height: auto
+				height: 100%
 				&:nth-child(1)
 					~ li
 						display: block
@@ -1114,37 +1154,87 @@ body
 	+r(320)
 		.grid__list-el
 			max-height: 320px
+	.column-section
+		.el
+			position: relative
+			color: #fff
+			&__text
+				position: absolute
+				left: 0
+				top: 0
+				right: 0
+				bottom: 0
+				padding: 0
+				background: linear-gradient(to bottom, rgba(45, 48, 71, 0), rgba(45, 48, 71, 1))
+				p
+					position: absolute
+					left: 20px
+					right: 20px
+					bottom: 20px
+			&.el--small
+				.el
+					margin-bottom: 20px
+					font-size: 16px
+					color: $grey-dark
+					line-height: 25px
+					font-weight: normal
+					&__text
+						position: relative
+						left: 0
+						right: 0
+						padding: 5px 5px 10px
+						background: none
+						p
+							position: relative
+							left: 0
+							right: 0
+							top: 0
+							bottom: 0
+					&__img
+						height: auto
+	.column-cat
+		.el
+			&__text
+				left: 10px
+				right: 10px
 /*-------------------------------------------------*/
 /*------------------ Category Page ----------------*/
 /*-------------------------------------------------*/
 .content
 	&__left
 		margin-right: 340px
-		+r(1024)
+		+r(1023)
 			margin-right: 0
 	/* left content */
 	&__cat
 		+pie-clearfix
-		.top-trend
-			.section__title
-				font-size: 42px
-				line-height: 52px
-				margin-bottom: 28px
-				text-transform: none
-				&:after
-					display: none
-			.el
-				width: 100%
-				&.el--small
-					.el
-						width: 50%
-						font-size: 20px
-						line-height: 30px
+		.section__title
+			font-size: 42px
+			line-height: 52px
+			text-transform: none
+			&:after
+				display: none
+		.el
+			width: 100%
+			font-size: 20px
+			line-height: 25px
+			&.el--small
+				.el
+					width: 50%
+					font-size: 20px
+					line-height: 25px
+					+r(480)
+						font-size: 14px
+						line-height: 20px
+		.subscribe-wrap
+			display: none
+			+r(960)
+				display: block
 	/* right aside */
 	.content__right
 		float: right
 		width: 300px
-		+r(1024)
+		+r(1023)
 			display: none
 .aside-ban
 	margin-bottom: 35px
@@ -1164,11 +1254,13 @@ body
 			transition: all 0.2s
 	li
 		display: inline-block
-		+ li
-			&:before
-				content: '/'
-				display: inline-block
-				margin-right: 5px
+		&:after
+			content: '/'
+			display: inline-block
+			margin-left: 4px
+		&:last-child
+			&:after
+				content: none
 .aside-top
 	margin-bottom: 20px
 	font-size: 15px
@@ -1207,9 +1299,18 @@ body
 .post
 	&__title
 		font-weight: 700
-		font-size: 48px
-		line-height: 60px
+		font-size: 42px
+		line-height: 52px
 		margin-bottom: 10px
+		+r(728)
+			font-size: 36px
+			line-height: 44px
+		+r(640)
+			font-size: 30px
+			line-height: 36px
+		+r(480)
+			font-size: 24px
+			line-height: 30px
 	&__socials
 		margin-bottom: 20px
 		overflow: hidden
@@ -1221,6 +1322,8 @@ body
 			li
 				margin-right: 0
 				margin-left: 10px
+			+r(728)
+				display: none
 	&-user
 		float: left
 		+pie-clearfix
@@ -1233,7 +1336,7 @@ body
 			border-radius: 5px
 			img
 				width: 100%
-				height: auto
+				height: 100%
 				vertical-align: bottom
 		&__text
 			float: left
@@ -1275,22 +1378,15 @@ body
 		line-height: 25px
 	.mgid-hr
 		margin-bottom: 20px
-.pagination.pagination-sm
-	.pagination__button
-		background-color: $orange
-		&:hover
-			background-color: $grey-dark
-	.pagination__next
-		float: right
-	.pagination__list
-		margin-left: 155px
-		margin-top: 10px
-		margin-right: 0
-		font-size: 32px
-		line-height: 39px
-		li
-			+ li
-				margin-left: 10px
+	~ .subscribe
+		display: none
+		overflow: hidden
+		float: none
+		background-color: transparent
+		.socials
+			margin-top: 0
+		+r(728)
+			display: block
 .post
 	&__share
 		overflow: hidden
@@ -1323,6 +1419,8 @@ body
 				i
 					margin-left: 5px
 					margin-right: 15px
+		+r(728)
+			display: none
 .comments-fb
 	min-height: 256px
 	background-color: #F5F5F5
@@ -1341,6 +1439,9 @@ body
 		text-transform: uppercase
 		span
 			color: $orange
+		+r(728)
+			font-size: 40px
+			line-height: 48px
 	.row
 		margin-left: -10px
 		margin-right: -10px
@@ -1357,7 +1458,7 @@ body
 				width: 50%
 			.mgid-large__text
 				font-size: 15px
-				line-height: 25px
+				line-height: 20px
 		a
 			display: block
 		+r(768)
@@ -1372,6 +1473,14 @@ body
 		font-size: 35px
 		line-height: 45px
 		background-color: #DAE9E9
+		+r(1024)
+			font-size: 30px
+			line-height: 40px
+		+r(728)
+			font-size: 24px
+			line-height: 30px
+		+r(480)
+			padding: 5px 5px 10px
 /*-------------------------------------------------*/
 /*----------------- Other styles ------------------*/
 /*-------------------------------------------------*/
