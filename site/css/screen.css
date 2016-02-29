@@ -1229,6 +1229,9 @@ body {
   vertical-align: bottom; }
 .hot-now .el__text {
   padding: 10px 0 20px; }
+.hot-now .el__text p {
+  overflow: hidden;
+  height: 40px; }
 @media only screen and (max-width: 1460px) {
   .hot-now {
     -webkit-border-radius: 0;
@@ -1281,6 +1284,9 @@ body {
   vertical-align: bottom; }
 .column-section .el__text {
   padding: 10px 15px 20px; }
+.column-section .el__text p {
+  overflow: hidden;
+  height: 60px; }
 @media only screen and (max-width: 480px) {
   .column-section .el__text {
     padding: 5px 5px 10px; } }
@@ -1329,6 +1335,8 @@ body {
     padding-right: 10px; } }
 .column-section .column-1 {
   width: 280px; }
+.column-section .column-1 .el__text p {
+  height: 40px; }
 @media only screen and (max-width: 1024px) {
   .column-section .column-1 {
     width: 260px; } }
@@ -1343,6 +1351,8 @@ body {
   width: 500px;
   font-size: 20px;
   line-height: 25px; }
+.column-section .column-2 .el__text p {
+  height: 50px; }
 @media only screen and (max-width: 1337px) {
   .column-section .column-2 {
     width: 50%;
@@ -1352,11 +1362,15 @@ body {
 @media only screen and (max-width: 1024px) {
   .column-section .column-2 {
     font-size: 18px;
-    line-height: 22px; } }
+    line-height: 22px; }
+  .column-section .column-2 .el__text p {
+    height: 44px; } }
 @media only screen and (max-width: 820px) {
   .column-section .column-2 {
     font-size: 16px;
-    line-height: 20px; } }
+    line-height: 20px; }
+  .column-section .column-2 .el__text p {
+    height: 40px; } }
 @media only screen and (max-width: 480px) {
   .column-section .column-2 {
     display: block;
@@ -1371,11 +1385,15 @@ body {
     width: 50%;
     font-size: 20px;
     line-height: 25px;
-    font-weight: normal; } }
+    font-weight: normal; }
+  .column-section .column-3 .el__text p {
+    height: 50px; } }
 @media only screen and (max-width: 1024px) {
   .column-section .column-3 {
     font-size: 18px;
-    line-height: 22px; } }
+    line-height: 22px; }
+  .column-section .column-3 .el__text p {
+    height: 44px; } }
 @media only screen and (max-width: 820px) {
   .column-section .column-3 {
     display: none; } }
@@ -1743,9 +1761,9 @@ body {
   background: linear-gradient(to bottom, rgba(45, 48, 71, 0), #2d3047); }
 .mobile.phone .column-section .el__text p {
   position: absolute;
-  left: 20px;
-  right: 20px;
-  bottom: 20px; }
+  left: 15px;
+  right: 15px;
+  bottom: 15px; }
 .mobile.phone .column-section .el.el--small .el {
   margin-bottom: 20px;
   font-size: 16px;

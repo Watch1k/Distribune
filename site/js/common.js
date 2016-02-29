@@ -184,7 +184,7 @@ head.ready(function(){
 
 		// resize grid blocks
 		function gridResize() {
-			$('.grid__list li').css('height', $('.grid__list li').eq(0).width() * 2 / 3);
+			$('.grid__list li').css('height', $('.grid__list li').eq(0).width() * 3 / 4);
 		};
 
 		if ($('.grid-wrap').length) {

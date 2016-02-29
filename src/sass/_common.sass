@@ -772,6 +772,9 @@ body
 				vertical-align: bottom
 		&__text
 			padding: 10px 0 20px
+			p
+				overflow: hidden
+				height: 40px
 	+r(1460)
 		border-radius: 0
 /* column-section */
@@ -811,6 +814,9 @@ body
 				vertical-align: bottom
 		&__text
 			padding: 10px 15px 20px
+			p
+				overflow: hidden
+				height: 60px
 			+r(480)
 				padding: 5px 5px 10px
 		&.el--small
@@ -852,6 +858,9 @@ body
 			padding-right: 10px
 	.column-1
 		width: 280px
+		.el__text
+			p
+				height: 40px
 		+r(1024)
 			width: 260px
 		+r(820)
@@ -863,6 +872,9 @@ body
 		width: 500px
 		font-size: 20px
 		line-height: 25px
+		.el__text
+			p
+				height: 50px
 		+r(1337)
 			width: 50%
 			font-size: 20px
@@ -871,9 +883,15 @@ body
 		+r(1024)
 			font-size: 18px
 			line-height: 22px
+			.el__text
+				p
+					height: 44px
 		+r(820)
 			font-size: 16px
 			line-height: 20px
+			.el__text
+				p
+					height: 40px
 		+r(480)
 			display: block
 			width: 100%
@@ -887,9 +905,15 @@ body
 			font-size: 20px
 			line-height: 25px
 			font-weight: normal
+			.el__text
+				p
+					height: 50px
 		+r(1024)
 			font-size: 18px
 			line-height: 22px
+			.el__text
+				p
+					height: 44px
 		+r(820)
 			display: none
 /* banner 100%x90px */
@@ -1180,9 +1204,9 @@ body
 				background: linear-gradient(to bottom, rgba(45, 48, 71, 0), rgba(45, 48, 71, 1))
 				p
 					position: absolute
-					left: 20px
-					right: 20px
-					bottom: 20px
+					left: 15px
+					right: 15px
+					bottom: 15px
 			&.el--small
 				.el
 					margin-bottom: 20px
