@@ -891,7 +891,7 @@ body {
     padding-bottom: 8px;
     padding-left: 60px;
     font-size: 13px; } }
-.popup-login__list li a i {
+.popup-login__list li a > i {
   position: absolute;
   left: 0;
   top: 0;
@@ -901,7 +901,7 @@ body {
   line-height: 24px;
   text-align: center;
   border-right: 1px solid rgba(255, 255, 255, 0.3); }
-.popup-login__list li a i:before {
+.popup-login__list li a > i:before {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -912,10 +912,26 @@ body {
   transform: translate(-50%, -50%);
   margin-left: 0; }
 @media only screen and (max-width: 480px) {
-  .popup-login__list li a i {
+  .popup-login__list li a > i {
     width: 45px;
     font-size: 16px;
     line-height: 16px; } }
+.popup-login__list li a > i .icon-distribune {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-image: url("../img/icons.png");
+  width: 18px;
+  height: 21px;
+  background-position: -38px 0px;
+  -moz-background-size: 56px 25px;
+  -o-background-size: 56px 25px;
+  background-size: 56px 25px; }
 .popup-login__list li + li {
   margin-top: 10px;
   background-color: #55ACEE; }
@@ -1474,9 +1490,9 @@ body {
   width: 17px;
   height: 25px;
   background-position: 0px 0px;
-  -moz-background-size: 34px 25px;
-  -o-background-size: 34px 25px;
-  background-size: 34px 25px; }
+  -moz-background-size: 56px 25px;
+  -o-background-size: 56px 25px;
+  background-size: 56px 25px; }
 
 .icon-arrow_right {
   float: right;
@@ -1484,10 +1500,10 @@ body {
   background-image: url("../img/icons.png");
   width: 17px;
   height: 25px;
-  background-position: -17px 0px;
-  -moz-background-size: 34px 25px;
-  -o-background-size: 34px 25px;
-  background-size: 34px 25px; }
+  background-position: -19px 0px;
+  -moz-background-size: 56px 25px;
+  -o-background-size: 56px 25px;
+  background-size: 56px 25px; }
 
 /* wrap-sm */
 .wrap-sm {

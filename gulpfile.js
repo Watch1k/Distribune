@@ -33,6 +33,7 @@ var opacity = function (css, opts) {
 var src = {
     root    : 'src',
     sass    : 'src/sass/',
+    sasslib : 'src/sass/lib/',
     js      : 'src/js',
     img     : 'src/img',
     svg     : 'src/img/svg',
@@ -84,7 +85,7 @@ gulp.task('sprite', function() {
     spriteData.img
         .pipe(gulp.dest(dest.img));
     spriteData.css
-        .pipe(gulp.dest(src.sass));
+        .pipe(gulp.dest(src.sasslib));
 });
 
 // html includes
@@ -166,7 +167,7 @@ gulp.task('font', function(){
 // make zip-file
 gulp.task('zip', function () {
     return gulp.src('site/**/*')
-        .pipe(zip('Miply.zip'))
+        .pipe(zip('Distribune_v1-1.zip'))
         .pipe(gulp.dest(''));
 });
 
