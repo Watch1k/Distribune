@@ -917,14 +917,8 @@ body {
     font-size: 16px;
     line-height: 16px; } }
 .popup-login__list li a > i .icon-distribune {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  display: inline-block;
+  margin-top: 12px;
   background-image: url("../img/icons.png");
   width: 18px;
   height: 21px;
@@ -932,6 +926,9 @@ body {
   -moz-background-size: 56px 25px;
   -o-background-size: 56px 25px;
   background-size: 56px 25px; }
+@media only screen and (max-width: 480px) {
+  .popup-login__list li a > i .icon-distribune {
+    margin-top: 6px; } }
 .popup-login__list li + li {
   margin-top: 10px;
   background-color: #55ACEE; }
