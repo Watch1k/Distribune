@@ -182,11 +182,6 @@ head.ready(function(){
 			});
 		};
 
-		// resize grid blocks
-		function gridResize() {
-			$('.grid__list li').css('height', $('.grid__list li').eq(0).width() * 3 / 4);
-		};
-
 		if ($('.grid-wrap').length) {
 			$('.grid__list li').hover(function(){
 				$(this).find('.grid__tooltip').css('top', '0');
@@ -194,10 +189,6 @@ head.ready(function(){
 				$(this).find('.grid__tooltip').css('top', '100%');
 			});
 			if (!phoneInd) {
-				gridResize();
-				$(window).on('resize', function(){
-					gridResize();
-				});
 				gridAnimation();
 			}
 		}

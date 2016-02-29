@@ -607,8 +607,6 @@ body
 	background-color: #2d3047
 	a
 		text-decoration: none
-		display: block
-		height: 100%
 .grid
 	&__list
 		+pie-clearfix
@@ -617,8 +615,10 @@ body
 			overflow: hidden
 			float: left
 			width: 20%
-			height: 180px
 			cursor: pointer
+			+ratio(4,3)
+			> a
+				+ratio-in
 			+r(1024)
 				width: 25%
 				&:nth-child(12)
@@ -766,10 +766,12 @@ body
 				color: $orange
 				transition: all 0.2s
 		&__img
+			+ratio(4,3)
+			overflow: hidden
 			img
 				width: 100%
-				height: auto
-				vertical-align: bottom
+				min-height: 100%
+				+ratio-in
 		&__text
 			padding: 10px 0 20px
 			p
@@ -808,10 +810,13 @@ body
 			&:hover
 				color: $orange
 				transition: all 0.2s
+		&__img
+			+ratio(4,3)
+			overflow: hidden
 			img
 				width: 100%
-				height: auto
-				vertical-align: bottom
+				min-height: 100%
+				+ratio-in
 		&__text
 			padding: 10px 15px 20px
 			p
@@ -1226,6 +1231,7 @@ body
 							right: 0
 							top: 0
 							bottom: 0
+							height: 50px
 					&__img
 						height: auto
 	.column-cat
@@ -1261,6 +1267,8 @@ body
 			width: 100%
 			font-size: 20px
 			line-height: 25px
+			p
+				height: 50px
 			&.el--small
 				.el
 					width: 50%
@@ -1269,6 +1277,8 @@ body
 					+r(480)
 						font-size: 14px
 						line-height: 20px
+						p
+							height: 40px
 		.subscribe-wrap
 			display: none
 			+r(960)
@@ -1329,13 +1339,15 @@ body
 				&:hover
 					color: $orange
 	&__img
+		overflow: hidden
 		float: left
 		margin-right: 10px
 		width: 100px
+		+ratio(4,3)
 		img
 			width: 100%
-			height: auto
-			vertical-align: bottom
+			min-height: 100%
+			+ratio-in
 /*-------------------------------------------------*/
 /*-------------------- Post Page ------------------*/
 /*-------------------------------------------------*/
@@ -1500,28 +1512,44 @@ body
 			.el
 				width: 50%
 			.mgid-large__text
-				font-size: 15px
-				line-height: 20px
+				font-size: 20px
+				line-height: 26px
+				p
+					height: 52px
+				+r(1179)
+					font-size: 15px
+					line-height: 20px
+					p
+						height: 40px
 		a
 			display: block
 		+r(768)
 			width: 100%
 	&__img
+		overflow: hidden
+		+ratio(4,3)
 		img
 			width: 100%
-			height: auto
-			vertical-align: bottom
+			min-height: 100%
+			+ratio-in
 	&__text
 		padding: 10px 15px 20px
 		font-size: 35px
 		line-height: 45px
 		background-color: #DAE9E9
+		p
+			overflow: hidden
+			height: 90px
 		+r(1024)
 			font-size: 30px
 			line-height: 40px
+			p
+				height: 80px
 		+r(728)
 			font-size: 24px
 			line-height: 30px
+			p
+				height: 60px
 		+r(480)
 			padding: 5px 5px 10px
 /*-------------------------------------------------*/
