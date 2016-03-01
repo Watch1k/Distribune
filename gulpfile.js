@@ -167,7 +167,7 @@ gulp.task('font', function(){
 // make zip-file
 gulp.task('zip', function () {
     return gulp.src('site/**/*')
-        .pipe(zip('Distribune_v1-2.zip'))
+        .pipe(zip('Distribune_v1-4.zip'))
         .pipe(gulp.dest(''));
 });
 

@@ -24,16 +24,28 @@ head.ready(function(){
 	});
 	$(document).on('click', '.flexMenu-viewMore > a', function(){
 		if ($(this).parent().hasClass('is-active')) {
-			$('.header').animate({'margin-bottom': $('.flexMenu-popup').outerHeight() - 1 + 'px'},500).siblings().eq(0).slideToggle(500);
+			if ($('.search-btn').hasClass('is-active')) {
+				$('.header').animate({'margin-bottom': $('.flexMenu-popup').outerHeight() - 1 + 70 + 'px'},500).siblings().eq(0).slideToggle(500);
+				$(this).siblings('.flexMenu-popup').css({'top': '120px'});
+			} else {
+				$(this).siblings('.flexMenu-popup').css({'top': '50px'});
+				$('.header').animate({'margin-bottom': $('.flexMenu-popup').outerHeight() - 1 + 'px'},500).siblings().eq(0).slideToggle(500);
+			}
 		} else {
-			$('.header').animate({'margin-bottom': '0'},500).siblings().eq(0).slideToggle(500);
+			if ($('.search-btn').hasClass('is-active')) {
+				$('.header').animate({'margin-bottom': '70px'},500).siblings().eq(0).slideToggle(500);
+			} else {
+				$('.header').animate({'margin-bottom': '0'},500).siblings().eq(0).slideToggle(500);
+			}
 		}
 	});
 	// onResize
 	$(window).on('resize', function(){
-		$('.header').animate({'margin-bottom': '0'},0).siblings().eq(0).slideUp(0);
+		$('.header').css({'margin-bottom': '0'}).siblings().eq(0).slideUp(0);
+		$('.flexMenu-popup').css({'top': '50px'});
 		$('.form-search').slideUp(0);
 		$('#menu_toggle').removeClass('is-active');
+		$('.search-btn').removeClass('is-active');
 	});
 
 	// search Toggle
@@ -43,6 +55,21 @@ head.ready(function(){
 			'position': 'relative',
 			'top': '0'
 		});
+		if ($(this).hasClass('is-active')) {
+			if ($('.flexMenu-viewMore').hasClass('is-active')) {
+				$('.flexMenu-popup').animate({'top': '120px'},500);
+				$('.header').animate({'margin-bottom': $('.flexMenu-popup').outerHeight() - 1 + 70 + 'px'},500);
+			} else {
+				$('.header').animate({'margin-bottom': '70px'},500);
+			}
+		} else {
+			if ($('.flexMenu-viewMore').hasClass('is-active')) {
+				$('.flexMenu-popup').animate({'top': '50px'},500);
+				$('.header').animate({'margin-bottom': $('.flexMenu-popup').outerHeight() - 1 + 'px'},500);
+			} else {
+				$('.header').animate({'margin-bottom': '0'},500);
+			}
+		}
 	});
 
 	// mobile nav

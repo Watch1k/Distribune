@@ -643,7 +643,10 @@ body {
 
 .form-search {
   display: none;
-  position: relative;
+  position: absolute !important;
+  top: 50px !important;
+  left: 0;
+  right: 0;
   z-index: 1;
   padding-top: 15px;
   padding-bottom: 15px;
