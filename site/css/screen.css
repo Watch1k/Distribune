@@ -222,6 +222,8 @@ body {
 .content {
   margin: 0 auto;
   max-width: 1460px; }
+.content-fixed {
+  max-width: 1220px; }
 
 .row:after {
   content: "";
@@ -1835,7 +1837,10 @@ body {
   /* left content */
   /* right aside */ }
 .content__left {
-  margin-right: 340px; }
+  margin-right: 360px; }
+@media only screen and (max-width: 1200px) {
+  .content__left {
+    margin-right: 340px; } }
 @media only screen and (max-width: 1023px) {
   .content__left {
     margin-right: 0; } }

@@ -29,6 +29,8 @@ body
 .content
 	margin: 0 auto
 	max-width: 1460px
+	&-fixed
+		max-width: 1220px
 .row
 	+pie-clearfix
 .header
@@ -1251,7 +1253,9 @@ body
 /*-------------------------------------------------*/
 .content
 	&__left
-		margin-right: 340px
+		margin-right: 360px
+		+r(1200)
+			margin-right: 340px
 		+r(1023)
 			margin-right: 0
 	/* left content */
