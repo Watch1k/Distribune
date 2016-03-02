@@ -31,12 +31,15 @@
 		$menusToCollapse.removeClass('is-active').find('> ul').hide();
 	}
 	$(window).resize(function () {
-		if ($(window).width() == widthWindow) return; 
-  		widthWindow = $(window).width();
-		clearTimeout(resizeTimeout);
-		resizeTimeout = setTimeout(function () {
-			adjustFlexMenu();
-		}, 200);
+		if ($(window).width() == widthWindow) {
+			// some code here
+		} else {
+	  		widthWindow = $(window).width();
+			clearTimeout(resizeTimeout);
+			resizeTimeout = setTimeout(function () {
+				adjustFlexMenu();
+			}, 200);
+		}
 	});
 	$.fn.flexMenu = function (options) {
 		var checkFlexObject,
