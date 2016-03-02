@@ -12,6 +12,7 @@
 		factory(jQuery);
 	}
 }(function ($) {
+	var widthWindow = $(window).width();
 	var flexObjects = [], // Array of all flexMenu objects
 		resizeTimeout;
 	// When the page is resized, adjust the flexMenus.
@@ -30,6 +31,8 @@
 		$menusToCollapse.removeClass('is-active').find('> ul').hide();
 	}
 	$(window).resize(function () {
+		if ($(window).width() == widthWindow) return; 
+  		widthWindow = $(window).width();
 		clearTimeout(resizeTimeout);
 		resizeTimeout = setTimeout(function () {
 			adjustFlexMenu();
