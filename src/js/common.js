@@ -1,4 +1,5 @@
 head.ready(function(){
+	var windowWidth = $(window).width();
 
 	$('#loader').fadeOut('fast');
 
@@ -41,6 +42,8 @@ head.ready(function(){
 	});
 	// onResize
 	$(window).on('resize', function(){
+		if ($(window).width() == windowWidth) return; 
+  		windowWidth = $(window).width();
 		$('.header').css({'margin-bottom': '0'}).siblings().eq(0).slideUp(0);
 		$('.flexMenu-popup').css({'top': '50px'});
 		$('.form-search').slideUp(0);
