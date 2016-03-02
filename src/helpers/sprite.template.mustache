@@ -34,6 +34,10 @@ $icons: map-merge($icons,({{name}}: (X: {{px.offset_x}}, Y:{{px.offset_y}}, W: {
 	$tw: icon-attr($iconName, TW) 	
 	$th: icon-attr($iconName, TH)
 	background-size: $tw/2 $th/2
+@mixin sprite-position-retina($iconName)
+	$x: icon-attr($iconName, X)
+	$y: icon-attr($iconName, Y)
+	background-position: $x/2 $y/2
 
 {{/options.functions}}
 
@@ -42,7 +46,9 @@ $icons: map-merge($icons,({{name}}: (X: {{px.offset_x}}, Y:{{px.offset_y}}, W: {
 @mixin sp($i)
 	+sprite-position($i)
 @mixin sr($i)
-	+sprite-retina($i)	
+	+sprite-retina($i)
+@mixin spr($i)
+	+sprite-position-retina($i)
 
 //{{#items}}
 //.icon-{{name}}

@@ -610,6 +610,11 @@ body
 	position: relative
 	overflow: hidden
 	background-color: #2d3047
+	.wave
+		position: absolute
+		left: 0
+		bottom: -2px
+		z-index: 100
 	a
 		text-decoration: none
 .grid
@@ -710,22 +715,24 @@ body
 		text-transform: uppercase
 		background-color: $orange
 		border-radius: 5px
-@keyframes animatedBackground
+@keyframes animatedWaveWhite
 	from
-		background-position: 160px center
+		background-position: 160px -31px
 	to
-		background-position: 0 center
+		background-position: 0 -31px
+@keyframes animatedWaveDark
+	from
+		background-position: 160px 0
+	to
+		background-position: 0 0
 .wave
-	position: absolute
-	left: 0
-	bottom: -2px
+	+s(wave_white)
 	width: 100%
-	height: 24px
-	background-image: url("../img/wave.png")
-	background-position: 0 center
-	background-repeat: repeat-x
-	z-index: 100
-	animation: animatedBackground 3s linear infinite
+	animation: animatedWaveWhite 3s linear infinite
+.wave-dark
+	+s(wave_dark)
+	width: 100%
+	animation: animatedWaveDark 3s linear infinite
 /* hot-now section */
 .hot-now
 	margin-bottom: 40px
@@ -1251,6 +1258,8 @@ body
 			top: 50px
 			font-size: 24px
 			line-height: 32px
+	.error-404
+		background: $grey-dark
 /*-------------------------------------------------*/
 /*------------------ Category Page ----------------*/
 /*-------------------------------------------------*/
@@ -1559,6 +1568,43 @@ body
 				height: 60px
 		+r(480)
 			padding: 5px 5px 10px
+/*-------------------------------------------------*/
+/*--------------------- 404 Page ------------------*/
+/*-------------------------------------------------*/
+.error-404
+	position: relative
+	margin-top: 20px
+	padding-top: 20px
+	min-height: 100vh
+	min-height: calc(100vh - 175px)
+	color: #fff
+	background: $grey-dark url("../img/404_bg.png") left bottom no-repeat
+	background-size: 100% auto
+	.wave-dark
+		position: absolute
+		left: 0
+		top: -23px
+	.breadcrumbs
+		margin-bottom: 15px
+		color: #fff
+	p
+		margin-bottom: 15px
+		font-size: 48px
+		line-height: 60px
+		+ p
+			margin-bottom: 0
+			font-size: 15px
+			line-height: 25px
+		+r(414)
+			font-size: 30px
+			line-height: 36px
+		+r(360)
+			font-size: 24px
+			line-height: 30px
+	+r(1920)
+		background-size: auto auto
+	+r(375)
+		background-position: left 85%
 /*-------------------------------------------------*/
 /*-------------- Validation styles ----------------*/
 /*-------------------------------------------------*/
