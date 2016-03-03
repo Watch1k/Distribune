@@ -3,15 +3,6 @@ head.ready(function(){
 
 	$('#loader').fadeOut('fast');
 
-	if ($('html').hasClass('phone')) {
-		$('.header').fadeOut(3000);
-	}
-	$('html').prepend('<div>' + head.screen.outerWidth + '</div>');
-
-	if ($('html').hasClass('mobile')) {
-		$('.footer').fadeOut(3000);
-	}
-
 	// validation
 	$.validate({
 		scrollToTopOnError : false
