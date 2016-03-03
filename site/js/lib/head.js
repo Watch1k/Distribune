@@ -7,7 +7,7 @@
 // detect mobile/tablet
 var phoneInd = false;
 function phoneDetection() {
-	if ((head.screen.innerWidth < 480 && head.portrait && head.mobile) || (head.screen.innerWidth < 768 && head.landscape && head.mobile)) {
+	if (($(window).width() < 480 && head.portrait && head.mobile) || ($(window).width() < 768 && head.landscape && head.mobile)) {
 		phoneInd = true;
 		var htmlTag = document.getElementsByTagName("html")[0];
 		if (typeof(htmlTag) != 'undefined' && htmlTag != null) {
