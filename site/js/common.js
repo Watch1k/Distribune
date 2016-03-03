@@ -6,6 +6,7 @@ head.ready(function(){
 	if ($('html').hasClass('phone')) {
 		$('.header').fadeOut(3000);
 	}
+	$('html').prepend('<div>' + head.screen.innerWidth + '</div>');
 
 	if ($('html').hasClass('mobile')) {
 		$('.footer').fadeOut(3000);
