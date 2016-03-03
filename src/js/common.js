@@ -3,6 +3,14 @@ head.ready(function(){
 
 	$('#loader').fadeOut('fast');
 
+	if ($('html').hasClass('phone')) {
+		$('.header').fadeOut(3000);
+	}
+
+	if ($('html').hasClass('mobile')) {
+		$('.footer').fadeOut(3000);
+	}
+
 	// validation
 	$.validate({
 		scrollToTopOnError : false
