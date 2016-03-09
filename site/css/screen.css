@@ -218,6 +218,9 @@ body {
   min-width: 320px;
   min-height: 100%;
   padding-bottom: 85px; }
+@media only screen and (max-width: 639px) {
+  .wrapper {
+    padding-bottom: 150px; } }
 
 .content {
   margin: 0 auto;
@@ -289,7 +292,7 @@ body {
     margin-right: 0; } }
 .logo a {
   display: block;
-  padding: 7px 0; }
+  padding: 12px 0; }
 @media only screen and (max-width: 480px) {
   .logo a {
     padding-top: 13px;
@@ -299,8 +302,8 @@ body {
     padding-top: 16px;
     padding-bottom: 16px; } }
 .logo img {
-  width: 270px;
-  height: 36px;
+  width: 200px;
+  height: 26px;
   vertical-align: middle; }
 @media only screen and (max-width: 480px) {
   .logo img {
@@ -418,18 +421,18 @@ body {
 .navigation {
   overflow: hidden;
   float: left;
-  max-width: -webkit-calc(100% - 630px);
-  max-width: -moz-calc(100% - 630px);
-  max-width: calc(100% - 630px);
+  max-width: -webkit-calc(100% - 550px);
+  max-width: -moz-calc(100% - 550px);
+  max-width: calc(100% - 550px);
   height: 50px;
   font-weight: 700;
   font-size: 14px;
   line-height: 18px; }
 @media only screen and (max-width: 960px) {
   .navigation {
-    max-width: -webkit-calc(100% - 450px);
-    max-width: -moz-calc(100% - 450px);
-    max-width: calc(100% - 450px); } }
+    max-width: -webkit-calc(100% - 470px);
+    max-width: -moz-calc(100% - 470px);
+    max-width: calc(100% - 470px); } }
 @media only screen and (max-width: 728px) {
   .navigation {
     width: 0;
@@ -546,7 +549,7 @@ body {
   float: left;
   padding-left: 40px;
   margin-right: 40px;
-  width: 310px;
+  width: 240px;
   font-size: 24px;
   line-height: 29px;
   text-transform: uppercase;
@@ -554,18 +557,17 @@ body {
 @media only screen and (max-width: 1024px) {
   .flexMenu-popup .flexMenu-title {
     margin-right: 20px;
-    padding-left: 20px;
-    width: 200px; } }
+    padding-left: 20px; } }
 @media only screen and (max-width: 728px) {
   .flexMenu-popup .flexMenu-title {
     display: none; } }
 .flexMenu-popup ul {
   overflow: hidden;
   position: relative;
-  margin-left: 350px; }
+  margin-left: 280px; }
 @media only screen and (max-width: 1024px) {
   .flexMenu-popup ul {
-    margin-left: 200px; } }
+    margin-left: 260px; } }
 @media only screen and (max-width: 728px) {
   .flexMenu-popup ul {
     margin-left: 0; }
@@ -658,7 +660,7 @@ body {
   float: left;
   padding-left: 40px;
   margin-right: 40px;
-  width: 310px;
+  width: 240px;
   font-size: 24px;
   line-height: 40px;
   font-weight: 700;
@@ -672,7 +674,10 @@ body {
     display: none; } }
 .form-search__in {
   overflow: hidden;
-  margin-left: 310px; }
+  margin-left: 280px; }
+@media only screen and (max-width: 1024px) {
+  .form-search__in {
+    margin-left: 260px; } }
 @media only screen and (max-width: 728px) {
   .form-search__in {
     margin-left: 20px;
@@ -738,6 +743,10 @@ body {
 @media only screen and (max-width: 640px) {
   .header .login-btn {
     margin-left: 0; } }
+@media only screen and (max-width: 419px) {
+  .header .login-btn {
+    padding-left: 10px;
+    padding-right: 10px; } }
 
 .login-btn {
   display: inline-block;
@@ -1513,11 +1522,11 @@ body {
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s; }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 719px) {
   .pagination__button {
     padding-left: 10px;
     padding-right: 10px;
-    width: 40px;
+    width: 40px !important;
     font-size: 0;
     line-height: 0;
     text-indent: -9999px; } }
@@ -1548,7 +1557,7 @@ body {
 .pagination__list li a {
   display: block;
   padding: 0 5px 2px; }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 719px) {
   .pagination__list {
     margin-left: 15px;
     margin-right: 15px;
@@ -1745,6 +1754,32 @@ body {
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s; }
+@media only screen and (max-width: 639px) {
+  .footer {
+    margin-top: -150px;
+    padding-top: 40px;
+    height: 150px; }
+  .footer__logo {
+    float: none;
+    text-align: center; }
+  .footer__logo p {
+    float: none;
+    display: inline-block; }
+  .footer__logo-link {
+    float: none;
+    display: inline-block; }
+  .footer__nav {
+    float: none;
+    margin-bottom: 20px;
+    text-align: center; }
+  .footer__nav ul {
+    display: inline-block; }
+  .footer__nav ul li:first-child {
+    margin-left: 0; } }
+@media only screen and (max-width: 419px) {
+  .footer__nav ul li {
+    margin-left: 15px;
+    font-size: 13px; } }
 
 /*------------------------------------------------ */
 /*----------- Tablet Portrait Main Page ---------- */
@@ -2024,7 +2059,7 @@ body {
 .post__socials a {
   text-decoration: none; }
 .post__socials .socials {
-  margin-top: 0;
+  margin-top: 5px;
   float: right; }
 .post__socials .socials li {
   margin-right: 0;
@@ -2060,7 +2095,8 @@ body {
   margin-top: 3px;
   font-weight: 700;
   font-size: 13px;
-  line-height: 16px; }
+  line-height: 16px;
+  cursor: pointer; }
 .post-user__buttons {
   margin-top: 5px; }
 .post-user__buttons:after {

@@ -26,6 +26,8 @@ body
 	min-width: 320px
 	min-height: 100%
 	padding-bottom: 85px
+	+r(639)
+		padding-bottom: 150px
 .content
 	margin: 0 auto
 	max-width: 1460px
@@ -84,7 +86,7 @@ body
 		margin-right: 0
 	a
 		display: block
-		padding: 7px 0
+		padding: 12px 0
 		+r(480)
 			padding-top: 13px
 			padding-bottom: 13px
@@ -92,8 +94,8 @@ body
 			padding-top: 16px
 			padding-bottom: 16px
 	img
-		width: 270px
-		height: 36px
+		width: 200px
+		height: 26px
 		vertical-align: middle
 		+r(480)
 			width: 180px
@@ -166,13 +168,13 @@ body
 .navigation
 	overflow: hidden
 	float: left
-	max-width: calc(100% - 630px)
+	max-width: calc(100% - 550px)
 	height: 50px
 	font-weight: 700
 	font-size: 14px
 	line-height: 18px
 	+r(960)
-		max-width: calc(100% - 450px)
+		max-width: calc(100% - 470px)
 	+r(728)
 		width: 0
 		height: 0
@@ -256,7 +258,7 @@ body
 		float: left
 		padding-left: 40px
 		margin-right: 40px
-		width: 310px
+		width: 240px
 		font-size: 24px
 		line-height: 29px
 		text-transform: uppercase
@@ -264,15 +266,14 @@ body
 		+r(1024)
 			margin-right: 20px
 			padding-left: 20px
-			width: 200px
 		+r(728)
 			display: none
 	ul
 		overflow: hidden
 		position: relative
-		margin-left: 350px
+		margin-left: 280px
 		+r(1024)
-			margin-left: 200px
+			margin-left: 260px
 		+r(728)
 			margin-left: 0
 			&:before
@@ -346,7 +347,7 @@ body
 		float: left
 		padding-left: 40px
 		margin-right: 40px
-		width: 310px
+		width: 240px
 		font-size: 24px
 		line-height: 40px
 		font-weight: 700
@@ -358,7 +359,9 @@ body
 			display: none
 	&__in
 		overflow: hidden
-		margin-left: 310px
+		margin-left: 280px
+		+r(1024)
+			margin-left: 260px
 		+r(728)
 			margin-left: 20px
 			margin-right: 20px
@@ -405,6 +408,9 @@ body
 		margin-left: 20px
 		+r(640)
 			margin-left: 0
+		+r(419)
+			padding-left: 10px
+			padding-right: 10px
 .login-btn
 	display: inline-block
 	padding-left: 15px
@@ -965,10 +971,10 @@ body
 		&:hover
 			background-color: $orange
 			transition: all 0.2s
-		+r(640)
+		+r(719)
 			padding-left: 10px
 			padding-right: 10px
-			width: 40px
+			width: 40px !important
 			font-size: 0
 			line-height: 0
 			text-indent: -9999px
@@ -995,7 +1001,7 @@ body
 			a
 				display: block
 				padding: 0 5px 2px
-		+r(640)
+		+r(719)
 			margin-left: 15px
 			margin-right: 15px
 			width: calc(100% - 110px)
@@ -1140,6 +1146,33 @@ body
 				a
 					color: $orange
 					transition: all 0.2s
+	+r(639)
+		margin-top: -150px
+		padding-top: 40px
+		height: 150px
+		&__logo
+			float: none
+			text-align: center
+			p
+				float: none
+				display: inline-block
+			&-link
+				float: none
+				display: inline-block
+		&__nav
+			float: none
+			margin-bottom: 20px
+			text-align: center
+			ul
+				display: inline-block
+				li:first-child
+					margin-left: 0
+	+r(419)
+		&__nav
+			ul
+				li
+					margin-left: 15px
+					font-size: 13px
 /*------------------------------------------------*/
 /*----------- Tablet Portrait Main Page ----------*/
 /*------------------------------------------------*/
@@ -1388,7 +1421,7 @@ body
 		a
 			text-decoration: none
 		.socials
-			margin-top: 0
+			margin-top: 5px
 			float: right
 			li
 				margin-right: 0
@@ -1420,6 +1453,7 @@ body
 					font-weight: 700
 					font-size: 13px
 					line-height: 16px
+					cursor: pointer
 		&__buttons
 			margin-top: 5px
 			+pie-clearfix
